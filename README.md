@@ -1,3 +1,8 @@
+Tofupay API Documentation was based on the slate template.
+
+All modules specification are under source/includes.
+
+
 Slate
 ========
 
