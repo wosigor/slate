@@ -89,38 +89,38 @@ created | timestamp |
 > ### Example Request
 
 ```shell
-curl https://api.stripe.com/v1/customers \
+curl https://api.tofupay.com/v1/customers \
    -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
    -d description="Customer for test@example.com" \
    -d source=tok_15XZLsLdZh7jQOUq86ISvtjn
 ```
 
 ```ruby
-require "stripe"
-Stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+require "tofupay"
+Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-Stripe::Customer.create(
+Tofupay::Customer.create(
   :description => "Customer for test@example.com",
-  :source => "tok_15XZLsLdZh7jQOUq86ISvtjn" # obtained with Stripe.js
+  :source => "tok_15XZLsLdZh7jQOUq86ISvtjn" # obtained with Tofupay.js
 )
 ```
 
 ```python
-import stripe
-stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+import tofupay
+tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-stripe.Customer.create(
+tofupay.Customer.create(
   description="Customer for test@example.com",
-  source="tok_15XZLsLdZh7jQOUq86ISvtjn" # obtained with Stripe.js
+  source="tok_15XZLsLdZh7jQOUq86ISvtjn" # obtained with Tofupay.js
 )
 ```
 
 ```php
-\Stripe\Stripe::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
 
-\Stripe\Customer::create(array(
+\Tofupay\Customer::create(array(
   "description" => "Customer for test@example.com",
-  "source" => "tok_15XZLsLdZh7jQOUq86ISvtjn" // obtained with Stripe.js
+  "source" => "tok_15XZLsLdZh7jQOUq86ISvtjn" // obtained with Tofupay.js
 ));
 ```
 
@@ -217,23 +217,23 @@ curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
 ```
 
 ```ruby
-require "stripe"
-Stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+require "tofupay"
+Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-Stripe::Customer.retrieve("cus_5V50idQJ7fxkRX")
+Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 ```
 
 ```python
-import stripe
-stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+import tofupay
+tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-stripe.Customer.retrieve("cus_5V50idQJ7fxkRX")
+tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 ```
 
 ```php
-\Stripe\Stripe::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
 
-\Stripe\Customer::retrieve("cus_5V50idQJ7fxkRX");
+\Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 ```
 > ### Example Response
 
@@ -322,32 +322,32 @@ Returns a customer object if a valid identifier was provided.
 ## Retrieve all customers
 
 > ### DEFINITION
-> GET https://api.stripe.com/v1/customers
+> GET https://api.tofupay.com/v1/customers
 > ### Example Request
 
 ```shell
-curl https://api.stripe.com/v1/customers?limit=3 \
+curl https://api.tofupay.com/v1/customers?limit=3 \
    -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc:
 ```
 
 ```ruby
-require "stripe"
-Stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+require "tofupay"
+Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-Stripe::Customer.all(:limit => 3)
+Tofupay::Customer.all(:limit => 3)
 ```
 
 ```python
-import stripe
-stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+import tofupay
+tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-stripe.Customer.all(limit=3)
+tofupay.Customer.all(limit=3)
 ```
 
 ```php
-\Stripe\Stripe::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
 
-\Stripe\Customer::all(array("limit" => 3));
+\Tofupay\Customer::all(array("limit" => 3));
 ```
 
 > ### Example Response
@@ -441,40 +441,40 @@ A dictionary with a data property that contains an array of up to limit transact
 ## Update a customer
 
 > ### DEFINITION
-> POST https://api.stripe.com/v1/customers/{CUSTOMER_ID}
+> POST https://api.tofupay.com/v1/customers/{CUSTOMER_ID}
 > ### Example Request
 
 ```shell
-curl https://api.stripe.com/v1/customers/cus_5V50idQJ7fxkRX \
+curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
    -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
    -d description="Customer for test@example.com"
 ```
 
 ```ruby
-require "stripe"
-Stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+require "tofupay"
+Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-cu = Stripe::Customer.retrieve("cus_5V50idQJ7fxkRX")
+cu = Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.description = "Customer for test@example.com"
-cu.source = "tok_15XZLsLdZh7jQOUq86ISvtjn" # obtained with Stripe.js
+cu.source = "tok_15XZLsLdZh7jQOUq86ISvtjn" # obtained with Tofupay.js
 cu.save
 ```
 
 ```python
-import stripe
-stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+import tofupay
+tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-cu = stripe.Customer.retrieve("cus_5V50idQJ7fxkRX")
+cu = tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.description = "Customer for test@example.com"
 cu.save()
 ```
 
 ```php
-\Stripe\Stripe::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
 
-$cu = \Stripe\Customer::retrieve("cus_5V50idQJ7fxkRX");
+$cu = \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 $cu->description = "Customer for test@example.com";
-$cu->source = "tok_15XZLsLdZh7jQOUq86ISvtjn"; // obtained with Stripe.js
+$cu->source = "tok_15XZLsLdZh7jQOUq86ISvtjn"; // obtained with Tofupay.js
 $cu->save();
 ```
 > ### Example Response
@@ -562,35 +562,35 @@ Returns the customer object if the update succeeded. Returns an [error](https://
 ## Delete a customer
 
 > ### DEFINITION
-> DELETE https://api.stripe.com/v1/customers/{CUSTOMER_ID}
+> DELETE https://api.tofupay.com/v1/customers/{CUSTOMER_ID}
 > ### Example Request
 
 ```shell
-curl https://api.stripe.com/v1/customers/cus_5V50idQJ7fxkRX \
+curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
    -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
    -X DELETE
 ```
 
 ```ruby
-require "stripe"
-Stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+require "tofupay"
+Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-cu = Stripe::Customer.retrieve("cus_5V50idQJ7fxkRX")
+cu = Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.delete
 ```
 
 ```python
-import stripe
-stripe.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+import tofupay
+tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
 
-cu = stripe.Customer.retrieve("cus_5V50idQJ7fxkRX")
+cu = tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.delete()
 ```
 
 ```php
-\Stripe\Stripe::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
 
-$cu = \Stripe\Customer::retrieve("cus_5V50idQJ7fxkRX");
+$cu = \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 $cu->delete();
 ```
 > ### Example Response

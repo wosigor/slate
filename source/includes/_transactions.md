@@ -218,7 +218,7 @@ token | optional, either **token** or **customer** is required | string | A paym
 customer | optional, either **token** or **customer** is required | string | An ID of a customer to be transactiond.
 country | N | string | Two-letter ISO code representing the country of the card. 
 description | N | string | Additional optional description of the transaction.
-capture | N | boolean | Whether or not to immediately capture the transaction. When false, the transaction issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured transactions expire in 7 days. For more information, see authorizing 
+capture | N, default **true** | boolean | Whether or not to immediately capture the transaction. When false, the transaction issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured transactions expire in 7 days. For more information, see authorizing 
 
 ### Returns
 Returns a transaction object if the transaction succeeded. Returns an [error](https://tofupay.com/docs/api#errors) if something goes wrong. A common source of error is an invalid or expired card, or a valid card with insufficient available balance.
