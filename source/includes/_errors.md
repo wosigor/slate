@@ -23,7 +23,7 @@ Status Code | Meaning
 Error Type | Meaning
 ---------- | -------
 invalid_request_error | Invalid request errors arise when your request has invalid parameters.
-api_error | API errors cover any other type of problem (e.g. a temporary problem with Stripe's servers) and should turn up only very infrequently.
+api_error | API errors cover any other type of problem (e.g. a temporary problem with Tofupay's servers) and should turn up only very infrequently.
 card_error | Card errors are the most common type of error you should expect to handle. They result when the user enters a card that can't be charged for some reason.
 
 ## Error codes
