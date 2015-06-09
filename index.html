@@ -108,65 +108,37 @@ You must replace `api.key` with your personal API key.
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_Fo_kuLTTrA10Sl1xLl2O7BvB"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855556</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_QWmaK4T3LFGvtqu9Xb8uou_l"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855537</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
     </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -191,14 +163,14 @@ You must replace `api.key` with your personal API key.
 <td>&lsquo;transaction&rsquo;</td>
 </tr>
 <tr>
-<td>created</td>
+<td>created_at</td>
 <td>timestamp</td>
-<td></td>
+<td>Time of creation</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>livemode</td>
+<td>boolean</td>
+<td>True - live, False - sandbox</td>
 </tr>
 </tbody></table>
 
@@ -252,65 +224,37 @@ You must replace `api.key` with your personal API key.
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_Fo_kuLTTrA10Sl1xLl2O7BvB"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855556</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_QWmaK4T3LFGvtqu9Xb8uou_l"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855537</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
     </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -412,65 +356,37 @@ You must replace `api.key` with your personal API key.
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_Fo_kuLTTrA10Sl1xLl2O7BvB"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855556</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_QWmaK4T3LFGvtqu9Xb8uou_l"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855537</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
     </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -530,75 +446,38 @@ You must replace `api.key` with your personal API key.
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_Fo_kuLTTrA10Sl1xLl2O7BvB"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855556</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_QWmaK4T3LFGvtqu9Xb8uou_l"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855537</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -664,65 +543,37 @@ $ch-&gt;save();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_Fo_kuLTTrA10Sl1xLl2O7BvB"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855556</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_QWmaK4T3LFGvtqu9Xb8uou_l"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855537</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
     </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -786,65 +637,37 @@ $ch-&gt;capture();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_Fo_kuLTTrA10Sl1xLl2O7BvB"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855556</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_QWmaK4T3LFGvtqu9Xb8uou_l"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855537</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
     </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
+    </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -909,66 +732,14 @@ $ch-&gt;refund();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1428926553</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rfnd_bVtaLU_88P3DZIfWTxsTWJas"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"refund"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"paid"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"succeeded"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15r6GqLdZh7jQOUqtMqEPMu2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"captured"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"balance_transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_15IehrLdZh7jQOUq2dX5hcyV"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"failure_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"amount_refunded"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"invoice"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"statement_descriptor"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fraud_details"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"receipt_email"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"receipt_number"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"shipping"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"application_fee"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"refunds"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855864</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"15.99"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hkd"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"transaction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"txn_lDIXWSGPOW3VVKTcAKe6_pBE"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -990,7 +761,13 @@ $ch-&gt;refund();
 <td>amount</td>
 <td>N</td>
 <td>double</td>
-<td>The amount represneting how much of this transaction to refund.</td>
+<td>The amount representing how much of this transaction to refund.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>N</td>
+<td>string</td>
+<td></td>
 </tr>
 </tbody></table>
 
@@ -1008,60 +785,34 @@ $ch-&gt;refund();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1421056271</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif@hong.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"delinquent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"subscriptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/subscriptions"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"account_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/sources"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856023</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tofu1@pay.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_card"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856009</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
         </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="w">
+        </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"default_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1085,14 +836,14 @@ $ch-&gt;refund();
 <td>&lsquo;customer&rsquo;</td>
 </tr>
 <tr>
-<td>created</td>
+<td>created_at</td>
 <td>timestamp</td>
-<td></td>
+<td>Time of creation</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>livemode</td>
+<td>boolean</td>
+<td>True - live, False - sandbox</td>
 </tr>
 </tbody></table>
 
@@ -1138,60 +889,34 @@ $ch-&gt;refund();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1421056271</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif@hong.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"delinquent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"subscriptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/subscriptions"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"account_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/sources"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856023</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tofu1@pay.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_card"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856009</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
         </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="w">
+        </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"default_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1262,60 +987,34 @@ $ch-&gt;refund();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1421056271</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif@hong.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"delinquent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"subscriptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/subscriptions"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"account_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/sources"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856023</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tofu1@pay.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_card"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856009</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
         </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="w">
+        </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"default_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1375,67 +1074,49 @@ $ch-&gt;refund();
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
   </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_rs8t9j9M-TuqDtlS"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1421056271</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="p">,</span><span class="w">
       </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif@hong.com"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"delinquent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"subscriptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/subscriptions"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-        </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"account_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-      </span><span class="nt">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/sources"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855964</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tofu@pay.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"default_card"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856023</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tofu1@pay.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"default_card"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
             </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856009</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
             </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
             </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
             </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass"</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-            </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="p">},</span><span class="w">
-            </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="w">
+            </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nt">"default_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1504,60 +1185,34 @@ $cu-&gt;save();
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"customer"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created"</span><span class="p">:</span><span class="w"> </span><span class="mi">1421056271</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer for test@example.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kif@hong.com"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"delinquent"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"subscriptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/subscriptions"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"discount"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"account_balance"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"usd"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"sources"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"list"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"total_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"has_more"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/v1/customers/cus_5V50idQJ7fxkRX/sources"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856023</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tofu1@pay.com"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"default_card"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"payment_methods"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_KtRLPsJGl5yUYWAVDnRFzCgj"</span><span class="p">,</span><span class="w">
         </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"last4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4242"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visa"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"funding"</span><span class="p">:</span><span class="w"> </span><span class="s2">"credit"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433856009</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
         </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"cvc_check"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass"</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_line1_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"address_zip_check"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"dynamic_last4"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="w">
+        </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cust_UkZICUu6UcehwfVf"</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"default_source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_15g9tMLdZh7jQOUqZKKlKMIr"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1679,22 +1334,26 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <h3 id="example-response">Example Response</h3>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tok_pyPkf6WFrHY7A97ZEBWdqUKs"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1430200302</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tok_5yNys5VrM2Te8XY-3fiGh5Pw"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_token"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"livemode"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855669</span><span class="p">,</span><span class="w">
   </span><span class="nt">"card"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_uT8mw0wgSwDtSx3WzpyqGqOI"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card_0sBsD2dkUwTX6vibbOqaf00J"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1433855669</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"visa"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"last_four"</span><span class="p">:</span><span class="w"> </span><span class="mi">4242</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"expire_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"expire_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_month"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"exp_year"</span><span class="p">:</span><span class="w"> </span><span class="mi">2016</span><span class="p">,</span><span class="w">
     </span><span class="nt">"holder_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tofu Pay"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HK"</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_1"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_2"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_city"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"address_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="nt">"address_postcode"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"customer"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -1711,7 +1370,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <tr>
 <td>id</td>
 <td>string</td>
-<td>The ID of the desired token.</td>
+<td>The ID of the token.</td>
 </tr>
 <tr>
 <td>object</td>
@@ -1719,14 +1378,14 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <td>&lsquo;token&rsquo;</td>
 </tr>
 <tr>
-<td>created</td>
+<td>created_at</td>
 <td>timestamp</td>
-<td></td>
+<td>Time of creation</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
+<td>livemode</td>
+<td>boolean</td>
+<td>True - live, False - sandbox</td>
 </tr>
 </tbody></table>
 
@@ -1806,7 +1465,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Creates a single use token that wraps the details of a credit card. This token can be used in place of a credit card associative array with any API method. These tokens can only be used once: by creating a new charge object, or attaching them to a customer.</p>
+<p>Creates a single use token that wraps the details of a credit card. This token can be used in place of a credit card dictionary with any API method. These tokens can only be used once: by creating a new charge object, or attaching them to a customer.</p>
 
 <h3 id="parameters">Parameters</h3>
 
