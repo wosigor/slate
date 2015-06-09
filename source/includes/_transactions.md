@@ -306,38 +306,88 @@ Tofupay.Transaction.all(limit=3)
 
 ```json
 {
-  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
-  "object": "transaction",
-  "livemode": false,
-  "created_at": 1433855556,
-  "amount": "15.99",
-  "currency": "hkd",
-  "captured": true,
-  "paid": false,
-  "refunded": false,
-  "payment_method": {
-    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
-    "object": "card",
-    "created_at": 1433855537,
-    "brand": "visa",
-    "last_four": 4242,
-    "exp_month": 12,
-    "exp_year": 2016,
-    "holder_name": "Tofu Pay",
-    "country": "HK",
-    "address_1": null,
-    "address_2": null,
-    "address_city": null,
-    "address_country": null,
-    "address_postcode": null,
-    "customer": null
-  },
-  "amount_refunded": "0.0",
-  "refunds": {
-    "object": "list",
-    "count": 0,
-    "data": [ ]
-  }
+  "object": "list",
+  "data": [
+    {
+      "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
+      "object": "transaction",
+      "livemode": false,
+      "created_at": 1433855556,
+      "amount": "15.99",
+      "currency": "hkd",
+      "captured": true,
+      "paid": false,
+      "refunded": false,
+      "payment_method": {
+      "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
+      "object": "card",
+      "created_at": 1433855537,
+      "brand": "visa",
+      "last_four": 4242,
+      "exp_month": 12,
+      "exp_year": 2016,
+      "holder_name": "Tofu Pay",
+      "country": "HK",
+      "address_1": null,
+      "address_2": null,
+      "address_city": null,
+      "address_country": null,
+      "address_postcode": null,
+      "customer": null
+      },
+      "amount_refunded": "0.0",
+      "refunds": {
+        "object": "list",
+        "count": 0,
+        "data": [ ]
+      }
+    },
+    {
+      "id": "txn_lDIXWSGPOW3VVKTcAKe6_pBE",
+      "object": "transaction",
+      "livemode": false,
+      "created_at": 1433855855,
+      "amount": "15.99",
+      "currency": "hkd",
+      "captured": true,
+      "paid": false,
+      "refunded": true,
+      "payment_method": {
+      "id": "card_0sBsD2dkUwTX6vibbOqaf00J",
+      "object": "card",
+      "created_at": 1433855669,
+      "brand": "visa",
+      "last_four": 4242,
+      "exp_month": 12,
+      "exp_year": 2016,
+      "holder_name": "Tofu Pay",
+      "country": "HK",
+      "address_1": null,
+      "address_2": null,
+      "address_city": null,
+      "address_country": null,
+      "address_postcode": null,
+      "customer": null
+      },
+      "amount_refunded": "15.99",
+      "refunds": {
+        "object": "list",
+        "count": 1,
+        "data": [
+          {
+            "id": "rfnd_bVtaLU_88P3DZIfWTxsTWJas",
+            "object": "refund",
+            "livemode": false,
+            "created_at": 1433855864,
+            "amount": "15.99",
+            "currency": "hkd",
+            "transaction": "txn_lDIXWSGPOW3VVKTcAKe6_pBE",
+            "reason": null
+          }
+        ]
+      }
+    }
+  ]
 }
 ```
 
