@@ -8,65 +8,37 @@ To transaction a credit or a debit card, you create a transaction object. You ca
 
 ```json
 {
-  "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
+  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
   "object": "transaction",
-  "created": 1428926553,
   "livemode": false,
-  "paid": true,
-  "status": "succeeded",
-  "amount": 1000,
-  "currency": "usd",
+  "created_at": 1433855556,
+  "amount": "15.99",
+  "currency": "hkd",
+  "captured": true,
+  "paid": false,
   "refunded": false,
-  "token": {
-    "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
+  "payment_method": {
+    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
     "object": "card",
-    "last4": "4242",
-    "brand": "Visa",
-    "funding": "credit",
-    "exp_month": 4,
+    "created_at": 1433855537,
+    "brand": "visa",
+    "last_four": 4242,
+    "exp_month": 12,
     "exp_year": 2016,
-    "country": "US",
-    "name": null,
-    "address_line1": null,
-    "address_line2": null,
+    "holder_name": "Tofu Pay",
+    "country": "HK",
+    "address_1": null,
+    "address_2": null,
     "address_city": null,
-    "address_state": null,
-    "address_zip": null,
     "address_country": null,
-    "cvc_check": null,
-    "address_line1_check": null,
-    "address_zip_check": null,
-    "dynamic_last4": null,
-    "metadata": {
-    },
+    "address_postcode": null,
     "customer": null
   },
-  "captured": true,
-  "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-  "failure_message": null,
-  "failure_code": null,
-  "amount_refunded": 0,
-  "customer": null,
-  "invoice": null,
-  "description": "",
-  "dispute": null,
-  "metadata": {
-  },
-  "statement_descriptor": null,
-  "fraud_details": {
-  },
-  "receipt_email": null,
-  "receipt_number": null,
-  "shipping": null,
-  "application_fee": null,
+  "amount_refunded": "0.0",
   "refunds": {
     "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-    "data": [
-
-    ]
+    "count": 0,
+    "data": [ ]
   }
 }
 ```
@@ -77,8 +49,8 @@ Parameter | Type | Description
 --------- | ------- | ----------- | -----------
 id | string | The ID of the desired transaction.
 object |  string | 'transaction'
-created | timestamp | 
-| |
+created_at | timestamp | Time of creation
+livemode | boolean | True - live, False - sandbox
 
 
 
@@ -142,65 +114,37 @@ tofupay.Transaction.create(
 
 ```json
 {
-  "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
+  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
   "object": "transaction",
-  "created": 1428926553,
   "livemode": false,
-  "paid": true,
-  "status": "succeeded",
-  "amount": 1000,
-  "currency": "usd",
+  "created_at": 1433855556,
+  "amount": "15.99",
+  "currency": "hkd",
+  "captured": true,
+  "paid": false,
   "refunded": false,
-  "token": {
-    "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
+  "payment_method": {
+    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
     "object": "card",
-    "last4": "4242",
-    "brand": "Visa",
-    "funding": "credit",
-    "exp_month": 4,
+    "created_at": 1433855537,
+    "brand": "visa",
+    "last_four": 4242,
+    "exp_month": 12,
     "exp_year": 2016,
-    "country": "US",
-    "name": null,
-    "address_line1": null,
-    "address_line2": null,
+    "holder_name": "Tofu Pay",
+    "country": "HK",
+    "address_1": null,
+    "address_2": null,
     "address_city": null,
-    "address_state": null,
-    "address_zip": null,
     "address_country": null,
-    "cvc_check": null,
-    "address_line1_check": null,
-    "address_zip_check": null,
-    "dynamic_last4": null,
-    "metadata": {
-    },
+    "address_postcode": null,
     "customer": null
   },
-  "captured": true,
-  "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-  "failure_message": null,
-  "failure_code": null,
-  "amount_refunded": 0,
-  "customer": null,
-  "invoice": null,
-  "description": "",
-  "dispute": null,
-  "metadata": {
-  },
-  "statement_descriptor": null,
-  "fraud_details": {
-  },
-  "receipt_email": null,
-  "receipt_number": null,
-  "shipping": null,
-  "application_fee": null,
+  "amount_refunded": "0.0",
   "refunds": {
     "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-    "data": [
-
-    ]
+    "count": 0,
+    "data": [ ]
   }
 }
 ```
@@ -268,65 +212,37 @@ Tofupay.Transaction.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 
 ```json
 {
-  "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
+  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
   "object": "transaction",
-  "created": 1428926553,
   "livemode": false,
-  "paid": true,
-  "status": "succeeded",
-  "amount": 1000,
-  "currency": "usd",
+  "created_at": 1433855556,
+  "amount": "15.99",
+  "currency": "hkd",
+  "captured": true,
+  "paid": false,
   "refunded": false,
-  "token": {
-    "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
+  "payment_method": {
+    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
     "object": "card",
-    "last4": "4242",
-    "brand": "Visa",
-    "funding": "credit",
-    "exp_month": 4,
+    "created_at": 1433855537,
+    "brand": "visa",
+    "last_four": 4242,
+    "exp_month": 12,
     "exp_year": 2016,
-    "country": "US",
-    "name": null,
-    "address_line1": null,
-    "address_line2": null,
+    "holder_name": "Tofu Pay",
+    "country": "HK",
+    "address_1": null,
+    "address_2": null,
     "address_city": null,
-    "address_state": null,
-    "address_zip": null,
     "address_country": null,
-    "cvc_check": null,
-    "address_line1_check": null,
-    "address_zip_check": null,
-    "dynamic_last4": null,
-    "metadata": {
-    },
+    "address_postcode": null,
     "customer": null
   },
-  "captured": true,
-  "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-  "failure_message": null,
-  "failure_code": null,
-  "amount_refunded": 0,
-  "customer": null,
-  "invoice": null,
-  "description": "",
-  "dispute": null,
-  "metadata": {
-  },
-  "statement_descriptor": null,
-  "fraud_details": {
-  },
-  "receipt_email": null,
-  "receipt_number": null,
-  "shipping": null,
-  "application_fee": null,
+  "amount_refunded": "0.0",
   "refunds": {
     "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-    "data": [
-
-    ]
+    "count": 0,
+    "data": [ ]
   }
 }
 ```
@@ -390,75 +306,38 @@ Tofupay.Transaction.all(limit=3)
 
 ```json
 {
-  "object": "list",
-  "url": "/v1/transactions",
-  "has_more": false,
-  "data": [
-    {
-      "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
-      "object": "transaction",
-      "created": 1428926553,
-      "livemode": false,
-      "paid": true,
-      "status": "succeeded",
-      "amount": 1000,
-      "currency": "usd",
-      "refunded": false,
-      "source": {
-        "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
-        "object": "card",
-        "last4": "4242",
-        "brand": "Visa",
-        "funding": "credit",
-        "exp_month": 4,
-        "exp_year": 2016,
-        "country": "US",
-        "name": null,
-        "address_line1": null,
-        "address_line2": null,
-        "address_city": null,
-        "address_state": null,
-        "address_zip": null,
-        "address_country": null,
-        "cvc_check": null,
-        "address_line1_check": null,
-        "address_zip_check": null,
-        "dynamic_last4": null,
-        "metadata": {
-        },
-        "customer": null
-      },
-      "captured": true,
-      "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-      "failure_message": null,
-      "failure_code": null,
-      "amount_refunded": 0,
-      "customer": null,
-      "invoice": null,
-      "description": "",
-      "dispute": null,
-      "metadata": {
-      },
-      "statement_descriptor": null,
-      "fraud_details": {
-      },
-      "receipt_email": null,
-      "receipt_number": null,
-      "shipping": null,
-      "application_fee": null,
-      "refunds": {
-        "object": "list",
-        "total_count": 0,
-        "has_more": false,
-        "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-        "data": [
-    
-        ]
-      }
-    },
-    {...},
-    {...}
-  ]
+  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
+  "object": "transaction",
+  "livemode": false,
+  "created_at": 1433855556,
+  "amount": "15.99",
+  "currency": "hkd",
+  "captured": true,
+  "paid": false,
+  "refunded": false,
+  "payment_method": {
+    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
+    "object": "card",
+    "created_at": 1433855537,
+    "brand": "visa",
+    "last_four": 4242,
+    "exp_month": 12,
+    "exp_year": 2016,
+    "holder_name": "Tofu Pay",
+    "country": "HK",
+    "address_1": null,
+    "address_2": null,
+    "address_city": null,
+    "address_country": null,
+    "address_postcode": null,
+    "customer": null
+  },
+  "amount_refunded": "0.0",
+  "refunds": {
+    "object": "list",
+    "count": 0,
+    "data": [ ]
+  }
 }
 ```
 
@@ -521,65 +400,37 @@ $ch->save();
 
 ```json
 {
-  "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
+  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
   "object": "transaction",
-  "created": 1428926553,
   "livemode": false,
-  "paid": true,
-  "status": "succeeded",
-  "amount": 1000,
-  "currency": "usd",
+  "created_at": 1433855556,
+  "amount": "15.99",
+  "currency": "hkd",
+  "captured": true,
+  "paid": false,
   "refunded": false,
-  "token": {
-    "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
+  "payment_method": {
+    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
     "object": "card",
-    "last4": "4242",
-    "brand": "Visa",
-    "funding": "credit",
-    "exp_month": 4,
+    "created_at": 1433855537,
+    "brand": "visa",
+    "last_four": 4242,
+    "exp_month": 12,
     "exp_year": 2016,
-    "country": "US",
-    "name": null,
-    "address_line1": null,
-    "address_line2": null,
+    "holder_name": "Tofu Pay",
+    "country": "HK",
+    "address_1": null,
+    "address_2": null,
     "address_city": null,
-    "address_state": null,
-    "address_zip": null,
     "address_country": null,
-    "cvc_check": null,
-    "address_line1_check": null,
-    "address_zip_check": null,
-    "dynamic_last4": null,
-    "metadata": {
-    },
+    "address_postcode": null,
     "customer": null
   },
-  "captured": true,
-  "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-  "failure_message": null,
-  "failure_code": null,
-  "amount_refunded": 0,
-  "customer": null,
-  "invoice": null,
-  "description": "",
-  "dispute": null,
-  "metadata": {
-  },
-  "statement_descriptor": null,
-  "fraud_details": {
-  },
-  "receipt_email": null,
-  "receipt_number": null,
-  "shipping": null,
-  "application_fee": null,
+  "amount_refunded": "0.0",
   "refunds": {
     "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-    "data": [
-
-    ]
+    "count": 0,
+    "data": [ ]
   }
 }
 ```
@@ -645,65 +496,37 @@ $ch->capture();
 
 ```json
 {
-  "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
+  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
   "object": "transaction",
-  "created": 1428926553,
   "livemode": false,
-  "paid": true,
-  "status": "succeeded",
-  "amount": 1000,
-  "currency": "usd",
+  "created_at": 1433855556,
+  "amount": "15.99",
+  "currency": "hkd",
+  "captured": true,
+  "paid": false,
   "refunded": false,
-  "source": {
-    "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
+  "payment_method": {
+    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
     "object": "card",
-    "last4": "4242",
-    "brand": "Visa",
-    "funding": "credit",
-    "exp_month": 4,
+    "created_at": 1433855537,
+    "brand": "visa",
+    "last_four": 4242,
+    "exp_month": 12,
     "exp_year": 2016,
-    "country": "US",
-    "name": null,
-    "address_line1": null,
-    "address_line2": null,
+    "holder_name": "Tofu Pay",
+    "country": "HK",
+    "address_1": null,
+    "address_2": null,
     "address_city": null,
-    "address_state": null,
-    "address_zip": null,
     "address_country": null,
-    "cvc_check": null,
-    "address_line1_check": null,
-    "address_zip_check": null,
-    "dynamic_last4": null,
-    "metadata": {
-    },
+    "address_postcode": null,
     "customer": null
   },
-  "captured": true,
-  "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-  "failure_message": null,
-  "failure_code": null,
-  "amount_refunded": 0,
-  "customer": null,
-  "invoice": null,
-  "description": "",
-  "dispute": null,
-  "metadata": {
-  },
-  "statement_descriptor": null,
-  "fraud_details": {
-  },
-  "receipt_email": null,
-  "receipt_number": null,
-  "shipping": null,
-  "application_fee": null,
+  "amount_refunded": "0.0",
   "refunds": {
     "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-    "data": [
-
-    ]
+    "count": 0,
+    "data": [ ]
   }
 }
 ```
@@ -765,66 +588,14 @@ $ch->refund();
 
 ```json
 {
-  "id": "txn_15r6GrLdZh7jQOUqvvc9t1fA",
-  "object": "transaction",
-  "created": 1428926553,
+  "id": "rfnd_bVtaLU_88P3DZIfWTxsTWJas",
+  "object": "refund",
   "livemode": false,
-  "paid": true,
-  "status": "succeeded",
-  "amount": 1000,
-  "currency": "usd",
-  "refunded": true,
-  "source": {
-    "id": "card_15r6GqLdZh7jQOUqtMqEPMu2",
-    "object": "card",
-    "last4": "4242",
-    "brand": "Visa",
-    "funding": "credit",
-    "exp_month": 4,
-    "exp_year": 2016,
-    "country": "US",
-    "name": null,
-    "address_line1": null,
-    "address_line2": null,
-    "address_city": null,
-    "address_state": null,
-    "address_zip": null,
-    "address_country": null,
-    "cvc_check": null,
-    "address_line1_check": null,
-    "address_zip_check": null,
-    "dynamic_last4": null,
-    "metadata": {
-    },
-    "customer": null
-  },
-  "captured": true,
-  "balance_transaction": "txn_15IehrLdZh7jQOUq2dX5hcyV",
-  "failure_message": null,
-  "failure_code": null,
-  "amount_refunded": 0,
-  "customer": null,
-  "invoice": null,
-  "description": "",
-  "dispute": null,
-  "metadata": {
-  },
-  "statement_descriptor": null,
-  "fraud_details": {
-  },
-  "receipt_email": null,
-  "receipt_number": null,
-  "shipping": null,
-  "application_fee": null,
-  "refunds": {
-    "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA/refunds",
-    "data": [
-
-    ]
-  }
+  "created_at": 1433855864,
+  "amount": "15.99",
+  "currency": "hkd",
+  "transaction": "txn_lDIXWSGPOW3VVKTcAKe6_pBE",
+  "reason": null
 }
 ```
 
@@ -836,7 +607,8 @@ Once entirely refunded, a charge can't be refunded again. This method will retur
 
 Parameter | Required | Type | Description
 --------- | ------- | ----------- | -----------
-amount | N | double | The amount represneting how much of this transaction to refund.
+amount | N | double | The amount representing how much of this transaction to refund.
+description | N | string | 
 
 ### Returns
 Returns the transaction object, with an updated refund property (set to true). Refunding a transaction will always succeed, unless the transaction is already refunded, expired, or an invalid refund amount is specified, in which case this method will return an [error](https://tofupay.com/docs/api#errors).

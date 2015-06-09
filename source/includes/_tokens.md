@@ -9,22 +9,26 @@ Tokens can be created with your publishable API key, which can safely be embedde
 
 ```json
 {
-  "id": "tok_pyPkf6WFrHY7A97ZEBWdqUKs",
-  "created_at": 1430200302,
+  "id": "tok_5yNys5VrM2Te8XY-3fiGh5Pw",
+  "object": "card_token",
+  "livemode": false,
+  "created_at": 1433855669,
   "card": {
-    "id": "card_uT8mw0wgSwDtSx3WzpyqGqOI",
+    "id": "card_0sBsD2dkUwTX6vibbOqaf00J",
     "object": "card",
-    "brand": null,
+    "created_at": 1433855669,
+    "brand": "visa",
     "last_four": 4242,
-    "expire_month": 5,
-    "expire_year": 2016,
+    "exp_month": 12,
+    "exp_year": 2016,
     "holder_name": "Tofu Pay",
     "country": "HK",
     "address_1": null,
     "address_2": null,
     "address_city": null,
     "address_country": null,
-    "address_postcode": null
+    "address_postcode": null,
+    "customer": null
   }
 }
 ```
@@ -33,10 +37,10 @@ Tokens can be created with your publishable API key, which can safely be embedde
 
 Parameter | Type | Description
 --------- | ------- | ----------- | -----------
-id | string | The ID of the desired token.
+id | string | The ID of the token.
 object |  string | 'token'
-created | timestamp | 
-| |
+created_at | timestamp | Time of creation
+livemode | boolean | True - live, False - sandbox
 
 
 
@@ -125,7 +129,7 @@ tofupay.Token.create(
 }
 ```
 
-Creates a single use token that wraps the details of a credit card. This token can be used in place of a credit card associative array with any API method. These tokens can only be used once: by creating a new charge object, or attaching them to a customer.
+Creates a single use token that wraps the details of a credit card. This token can be used in place of a credit card dictionary with any API method. These tokens can only be used once: by creating a new charge object, or attaching them to a customer.
 
 ### Parameters
 

@@ -8,60 +8,34 @@ Customer objects allow you to perform recurring charges and track multiple charg
 
 ```json
 {
+  "id": "cust_UkZICUu6UcehwfVf",
   "object": "customer",
-  "created": 1421056271,
-  "id": "cus_5V50idQJ7fxkRX",
   "livemode": false,
-  "description": "kif",
-  "email": "kif@hong.com",
-  "delinquent": false,
-  "metadata": {
-  },
-  "subscriptions": {
-    "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/subscriptions",
-    "data": [
-
-    ]
-  },
-  "discount": null,
-  "account_balance": 0,
-  "currency": "usd",
-  "sources": {
-    "object": "list",
-    "total_count": 1,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/sources",
+  "created_at": 1433856023,
+  "email": "tofu1@pay.com",
+  "description": null,
+  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "payment_methods": {
     "data": [
       {
-        "id": "card_15g9tMLdZh7jQOUqZKKlKMIr",
+        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
         "object": "card",
-        "last4": "4242",
-        "brand": "Visa",
-        "funding": "credit",
-        "exp_month": 3,
+        "created_at": 1433856009,
+        "brand": "visa",
+        "last_four": 4242,
+        "exp_month": 12,
         "exp_year": 2016,
-        "country": "US",
-        "name": null,
-        "address_line1": null,
-        "address_line2": null,
+        "holder_name": "Tofu Pay",
+        "country": "HK",
+        "address_1": null,
+        "address_2": null,
         "address_city": null,
-        "address_state": null,
-        "address_zip": null,
         "address_country": null,
-        "cvc_check": "pass",
-        "address_line1_check": null,
-        "address_zip_check": null,
-        "dynamic_last4": null,
-        "metadata": {
-        },
-        "customer": "cus_5V50idQJ7fxkRX"
+        "address_postcode": null,
+        "customer": "cust_UkZICUu6UcehwfVf"
       }
     ]
-  },
-  "default_source": "card_15g9tMLdZh7jQOUqZKKlKMIr"
+  }
 }
 ```
 
@@ -71,8 +45,8 @@ Parameter | Type | Description
 --------- | ------- | ----------- | -----------
 id | string | The ID of the customer.
 object |  string | 'customer'
-created | timestamp | 
-| |
+created_at | timestamp | Time of creation
+livemode | boolean | True - live, False - sandbox
 
 
 
@@ -128,60 +102,34 @@ tofupay.Customer.create(
 
 ```json
 {
+  "id": "cust_UkZICUu6UcehwfVf",
   "object": "customer",
-  "created": 1421056271,
-  "id": "cus_5V50idQJ7fxkRX",
   "livemode": false,
-  "description": "kif",
-  "email": "kif@hong.com",
-  "delinquent": false,
-  "metadata": {
-  },
-  "subscriptions": {
-    "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/subscriptions",
-    "data": [
-
-    ]
-  },
-  "discount": null,
-  "account_balance": 0,
-  "currency": "usd",
-  "sources": {
-    "object": "list",
-    "total_count": 1,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/sources",
+  "created_at": 1433856023,
+  "email": "tofu1@pay.com",
+  "description": null,
+  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "payment_methods": {
     "data": [
       {
-        "id": "card_15g9tMLdZh7jQOUqZKKlKMIr",
+        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
         "object": "card",
-        "last4": "4242",
-        "brand": "Visa",
-        "funding": "credit",
-        "exp_month": 3,
+        "created_at": 1433856009,
+        "brand": "visa",
+        "last_four": 4242,
+        "exp_month": 12,
         "exp_year": 2016,
-        "country": "US",
-        "name": null,
-        "address_line1": null,
-        "address_line2": null,
+        "holder_name": "Tofu Pay",
+        "country": "HK",
+        "address_1": null,
+        "address_2": null,
         "address_city": null,
-        "address_state": null,
-        "address_zip": null,
         "address_country": null,
-        "cvc_check": "pass",
-        "address_line1_check": null,
-        "address_zip_check": null,
-        "dynamic_last4": null,
-        "metadata": {
-        },
-        "customer": "cus_5V50idQJ7fxkRX"
+        "address_postcode": null,
+        "customer": "cust_UkZICUu6UcehwfVf"
       }
     ]
-  },
-  "default_source": "card_15g9tMLdZh7jQOUqZKKlKMIr"
+  }
 }
 ```
 
@@ -243,60 +191,34 @@ tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 
 ```json
 {
+  "id": "cust_UkZICUu6UcehwfVf",
   "object": "customer",
-  "created": 1421056271,
-  "id": "cus_5V50idQJ7fxkRX",
   "livemode": false,
-  "description": "kif",
-  "email": "kif@hong.com",
-  "delinquent": false,
-  "metadata": {
-  },
-  "subscriptions": {
-    "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/subscriptions",
-    "data": [
-
-    ]
-  },
-  "discount": null,
-  "account_balance": 0,
-  "currency": "usd",
-  "sources": {
-    "object": "list",
-    "total_count": 1,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/sources",
+  "created_at": 1433856023,
+  "email": "tofu1@pay.com",
+  "description": null,
+  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "payment_methods": {
     "data": [
       {
-        "id": "card_15g9tMLdZh7jQOUqZKKlKMIr",
+        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
         "object": "card",
-        "last4": "4242",
-        "brand": "Visa",
-        "funding": "credit",
-        "exp_month": 3,
+        "created_at": 1433856009,
+        "brand": "visa",
+        "last_four": 4242,
+        "exp_month": 12,
         "exp_year": 2016,
-        "country": "US",
-        "name": null,
-        "address_line1": null,
-        "address_line2": null,
+        "holder_name": "Tofu Pay",
+        "country": "HK",
+        "address_1": null,
+        "address_2": null,
         "address_city": null,
-        "address_state": null,
-        "address_zip": null,
         "address_country": null,
-        "cvc_check": "pass",
-        "address_line1_check": null,
-        "address_zip_check": null,
-        "dynamic_last4": null,
-        "metadata": {
-        },
-        "customer": "cus_5V50idQJ7fxkRX"
+        "address_postcode": null,
+        "customer": "cust_UkZICUu6UcehwfVf"
       }
     ]
-  },
-  "default_source": "card_15g9tMLdZh7jQOUqZKKlKMIr"
+  }
 }
 ```
 
@@ -359,67 +281,49 @@ tofupay.Customer.all(limit=3)
 ```json
 {
   "object": "list",
-  "url": "/v1/customers",
-  "has_more": false,
   "data": [
     {
+      "id": "cust_rs8t9j9M-TuqDtlS",
       "object": "customer",
-      "created": 1421056271,
-      "id": "cus_5V50idQJ7fxkRX",
       "livemode": false,
-      "description": "kif",
-      "email": "kif@hong.com",
-      "delinquent": false,
-      "metadata": {
-      },
-      "subscriptions": {
-        "object": "list",
-        "total_count": 0,
-        "has_more": false,
-        "url": "/v1/customers/cus_5V50idQJ7fxkRX/subscriptions",
-        "data": [
-    
-        ]
-      },
-      "discount": null,
-      "account_balance": 0,
-      "currency": "usd",
-      "sources": {
-        "object": "list",
-        "total_count": 1,
-        "has_more": false,
-        "url": "/v1/customers/cus_5V50idQJ7fxkRX/sources",
+      "created_at": 1433855964,
+      "email": "tofu@pay.com",
+      "description": null,
+      "default_card": null,
+      "payment_methods": {
+        "data": [ ]
+      }
+    },
+    {
+      "id": "cust_UkZICUu6UcehwfVf",
+      "object": "customer",
+      "livemode": false,
+      "created_at": 1433856023,
+      "email": "tofu1@pay.com",
+      "description": null,
+      "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+      "payment_methods": {
         "data": [
           {
-            "id": "card_15g9tMLdZh7jQOUqZKKlKMIr",
+            "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
             "object": "card",
-            "last4": "4242",
-            "brand": "Visa",
-            "funding": "credit",
-            "exp_month": 3,
+            "created_at": 1433856009,
+            "brand": "visa",
+            "last_four": 4242,
+            "exp_month": 12,
             "exp_year": 2016,
-            "country": "US",
-            "name": null,
-            "address_line1": null,
-            "address_line2": null,
+            "holder_name": "Tofu Pay",
+            "country": "HK",
+            "address_1": null,
+            "address_2": null,
             "address_city": null,
-            "address_state": null,
-            "address_zip": null,
             "address_country": null,
-            "cvc_check": "pass",
-            "address_line1_check": null,
-            "address_zip_check": null,
-            "dynamic_last4": null,
-            "metadata": {
-            },
-            "customer": "cus_5V50idQJ7fxkRX"
+            "address_postcode": null,
+            "customer": "cust_UkZICUu6UcehwfVf"
           }
         ]
-      },
-      "default_source": "card_15g9tMLdZh7jQOUqZKKlKMIr"
-    },
-    {...},
-    {...}
+      }
+    }
   ]
 }
 ```
@@ -485,60 +389,34 @@ $cu->save();
 
 ```json
 {
+  "id": "cust_UkZICUu6UcehwfVf",
   "object": "customer",
-  "created": 1421056271,
-  "id": "cus_5V50idQJ7fxkRX",
   "livemode": false,
-  "description": "Customer for test@example.com",
-  "email": "kif@hong.com",
-  "delinquent": false,
-  "metadata": {
-  },
-  "subscriptions": {
-    "object": "list",
-    "total_count": 0,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/subscriptions",
-    "data": [
-
-    ]
-  },
-  "discount": null,
-  "account_balance": 0,
-  "currency": "usd",
-  "sources": {
-    "object": "list",
-    "total_count": 1,
-    "has_more": false,
-    "url": "/v1/customers/cus_5V50idQJ7fxkRX/sources",
+  "created_at": 1433856023,
+  "email": "tofu1@pay.com",
+  "description": null,
+  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "payment_methods": {
     "data": [
       {
-        "id": "card_15g9tMLdZh7jQOUqZKKlKMIr",
+        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
         "object": "card",
-        "last4": "4242",
-        "brand": "Visa",
-        "funding": "credit",
-        "exp_month": 3,
+        "created_at": 1433856009,
+        "brand": "visa",
+        "last_four": 4242,
+        "exp_month": 12,
         "exp_year": 2016,
-        "country": "US",
-        "name": null,
-        "address_line1": null,
-        "address_line2": null,
+        "holder_name": "Tofu Pay",
+        "country": "HK",
+        "address_1": null,
+        "address_2": null,
         "address_city": null,
-        "address_state": null,
-        "address_zip": null,
         "address_country": null,
-        "cvc_check": "pass",
-        "address_line1_check": null,
-        "address_zip_check": null,
-        "dynamic_last4": null,
-        "metadata": {
-        },
-        "customer": "cus_5V50idQJ7fxkRX"
+        "address_postcode": null,
+        "customer": "cust_UkZICUu6UcehwfVf"
       }
     ]
-  },
-  "default_source": "card_15g9tMLdZh7jQOUqZKKlKMIr"
+  }
 }
 ```
 
