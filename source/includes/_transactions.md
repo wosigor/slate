@@ -733,7 +733,7 @@ Returns the transaction object, with an updated captured property (set to true).
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/refund \
+curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/refunds \
    -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
    -X POST
 ```
