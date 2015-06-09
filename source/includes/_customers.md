@@ -211,6 +211,10 @@ Returns a customer object if the call succeeded.
 
 ## Retrieve a customer
 
+> ### DEFINITION
+> POST https://api.tofupay.com/v1/customers/{CUSTOMER_ID}
+> ### Example Request
+
 ```shell
 curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
    -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc:
