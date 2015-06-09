@@ -483,7 +483,7 @@ A dictionary with a data property that contains an array of up to limit transact
 ## Update a transaction
 
 > ### DEFINITION
-> POST https://api.tofupay.com/v1/transaction/{TRANSACTION_ID}
+> POST https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}
 > ### Example Request
 
 ```shell
@@ -729,7 +729,7 @@ Returns the transaction object, with an updated captured property (set to true).
 ## Refund a transaction
 
 > ### DEFINITION
-> POST https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}/refund
+> POST https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}/refunds
 > ### Example Request
 
 ```shell
