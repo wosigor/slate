@@ -157,9 +157,9 @@ Parameter | Required | Type | Description
 --------- | ------- | ----------- | -----------
 amount | **Y** | double | The amount to be transactiond.
 currency | **Y** | string | 3-letter [ISO code](https://support.tofupay.com/questions/which-currencies-does-tofupay-support) for currency.
-token | optional, either **token** or **customer** is required | string | A payment card token.
+payment_method | optional, either **payment_method** or **customer** is required | string | A payment card token.
 | | |
-customer | optional, either **token** or **customer** is required | string | An ID of a customer to be transactiond.
+customer | optional, either **payment_method** or **customer** is required | string | An ID of a customer to be transactiond.
 country | N | string | Two-letter ISO code representing the country of the card. 
 description | N | string | Additional optional description of the transaction.
 capture | N, default **true** | boolean | Whether or not to immediately capture the transaction. When false, the transaction issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured transactions expire in 7 days. For more information, see authorizing 
