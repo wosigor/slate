@@ -51,8 +51,10 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 ```shell
 curl https://api.tofupay.com/v1/charges \
    -u key_private_sandbox_qg15eqpUrbT6Gufhjq9ds0Jc:
+
+   > curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).
 ```
-> curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).
+
 
 ```ruby
 require "tofupay"

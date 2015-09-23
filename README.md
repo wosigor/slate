@@ -67,3 +67,14 @@ You can now see the docs at <http://localhost:4567>. Whoa! That was fast!
 availalable at the output of `boot2docker ip` instead of `localhost:4567`.*
 
 Now that Slate is all set up your machine, you'll probably want to learn more about [editing Slate markdown](https://github.com/tripit/slate/wiki/Markdown-Syntax), or [how to publish your docs](https://github.com/tripit/slate/wiki/Deploying-Slate).
+
+
+### Publishing changes
+Publishing Your Docs to Github Pages
+
+Publishing your API documentation couldn't be more simple.
+
+Commit your changes to the markdown source: git commit -a -m "Update index.md"
+Push the markdown source changes to Github: git push
+Add "gh-pages" as a local branch pointing to the remote (GitHub doc)
+Compile to HTML, and push the HTML to Github pages: rake publish
