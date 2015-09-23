@@ -70,11 +70,9 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 </blockquote>
 <pre class="highlight shell"><code>curl https://api.tofupay.com/v1/charges <span class="se">\</span>
    -u key_private_sandbox_qg15eqpUrbT6Gufhjq9ds0Jc:
-</code></pre>
 
-<blockquote>
-<p>curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).</p>
-</blockquote>
+   &gt; curl uses the -u flag to pass basic auth credentials <span class="o">(</span>adding a colon after your API key will prevent it from asking you <span class="k">for </span>a password<span class="o">)</span>.
+</code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
 <span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_qg15eqpUrbT6Gufhjq9ds0Jc"</span>
 </code></pre>
