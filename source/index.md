@@ -15,10 +15,10 @@ toc_footers:
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - tokens
   - transactions
   - customers
   - cards
-  - tokens
   - errors
 
 search: true
@@ -49,28 +49,28 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/charges \
-   -u key_private_sandbox_qg15eqpUrbT6Gufhjq9ds0Jc:
-
-   > curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).
+curl https://api.tofupay.com/v1/transactions \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 ```
+
+> curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).
 
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 ```
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 ```
 
-> Make sure to replace `api.key` with your API key.
+> The API key has been preset for you.
 
 You authenticate to the Tofupay API by providing one of your API keys in the request. You can manage your API keys from your [account](https://dashboard.tofupay.com/account). You can have multiple API keys active at one time. Your API keys carry many privileges, so be sure to keep them secret!
 To use your API key, you need only set tofupay.api_key equal to the key. The Python library will automatically send this key in each request.

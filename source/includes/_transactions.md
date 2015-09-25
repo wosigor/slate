@@ -8,37 +8,40 @@ To transaction a credit or a debit card, you create a transaction object. You ca
 
 ```json
 {
-  "id": "txn_Fo_kuLTTrA10Sl1xLl2O7BvB",
+  "id": "txn_7jxk6UZWzPI0MAvjOdIVFs",
   "object": "transaction",
   "livemode": false,
-  "created_at": 1433855556,
-  "amount": "15.99",
-  "currency": "hkd",
-  "captured": true,
+  "created_at": 1443080242,
   "paid": false,
+  "status": "succeded",
+  "amount": 2000,
+  "currency": "usd",
+  "captured": true,
   "refunded": false,
   "payment_method": {
-    "id": "card_QWmaK4T3LFGvtqu9Xb8uou_l",
+    "id": "card_Re4tQzKBEPm4586TcgLCCnbt",
     "object": "card",
-    "created_at": 1433855537,
+    "created_at": 1443079778,
     "brand": "visa",
     "last_four": 4242,
     "exp_month": 12,
     "exp_year": 2016,
     "holder_name": "Tofu Pay",
-    "country": "HK",
-    "address_1": null,
+    "country": null,
+    "address_1": "123",
     "address_2": null,
-    "address_city": null,
-    "address_country": null,
+    "address_city": "Hong Kong",
+    "address_country": "Hong Kong",
     "address_postcode": null,
     "customer": null
   },
-  "amount_refunded": "0.0",
+  "failure_message": null,
+  "failure_code": null,
+  "amount_refunded": 0,
   "refunds": {
     "object": "list",
-    "count": 0,
-    "data": [ ]
+    "url": "/v1/transactions/txn_7jxk6UZWzPI0MAvjOdIVFs/refunds",
+    "data": []
   }
 }
 ```
@@ -51,6 +54,22 @@ id | string | The ID of the desired transaction.
 object |  string | 'transaction'
 created_at | timestamp | Time of creation
 livemode | boolean | True - live, False - sandbox
+paid | boolean | True - if transaction succeed.
+status | string | Status of payment - succeded or failed.
+amount | integer | The amount to be transactiond.
+currency | string | 3-letter [ISO code](https://support.tofupay.com/questions/which-currencies-does-tofupay-support) for currency.
+payment_method | string | A payment card token.
+| | |
+customer | string | An ID of a customer this transaction is for (if exists).
+country | string | Two-letter ISO code representing the country of the card. 
+description | string | Additional optional description of the transaction.
+captured | boolean | Whether or not to immediately capture the transaction. When false, the transaction issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured transactions expire in 7 days. For more information, see authorizing
+refunded | boolean | True if tranaction is fully refunded
+failure_message | string | Description of the failure if transaction failed.
+failure_code | string | Code of the failure.
+amount_refunded | integer | Total amount of the refunded transaction.
+refunds | list | List of refunds attached to transaction.
+
 
 
 
@@ -68,7 +87,7 @@ livemode | boolean | True - live, False - sandbox
 
 ```shell
 curl https://api.tofupay.com/v1/transactions \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -d amount=400 \
    -d currency=usd \
    -d token=tok_15XZLsLdZh7jQOUq86ISvtjn \
@@ -77,7 +96,7 @@ curl https://api.tofupay.com/v1/transactions \
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay::Transaction.create(
   :amount => 400,
@@ -89,7 +108,7 @@ Tofupay::Transaction.create(
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 tofupay.Transaction.create(
   amount=400,
@@ -100,7 +119,7 @@ tofupay.Transaction.create(
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 \Tofupay\Transaction::create(array(
   "amount" => 400,
@@ -186,25 +205,25 @@ Returns a transaction object if the transaction succeeded. Returns an [error](ht
 
 ```shell
 curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc:
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 ```
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay::Transaction.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```python
 import Tofupay
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay.Transaction.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 \Tofupay\Transaction::retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn");
 ```
@@ -279,25 +298,25 @@ Returns a transaction if a valid ID was provided. Raises an error otherwise.
 
 ```shell
 curl https://api.tofupay.com/v1/transactions?limit=3 \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc:
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 ```
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay::Transaction.all(:limit => 3)
 ```
 
 ```python
 import Tofupay
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay.Transaction.all(limit=3)
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 \Tofupay\Transaction::all(array("limit" => 3));
 ```
@@ -417,13 +436,13 @@ A dictionary with a data property that contains an array of up to limit transact
 
 ```shell
 curl https://api.tofupay.com/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -d description="Transaction for test@example.com"
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 ch = Tofupay::Charge.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.description = "Charge for test@example.com"
@@ -432,7 +451,7 @@ ch.save
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 ch = tofupay.Charge.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.description = "Charge for test@example.com"
@@ -440,7 +459,7 @@ ch.save()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 $ch = \Tofupay\Charge::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch->description = "Charge for test@example.com";
@@ -491,7 +510,7 @@ Updates the specified transaction by setting the values of the parameters passed
 
 Parameter | Required | Type | Description
 --------- | ------- | ----------- | -----------
-description | N | string | The description of the transaction.
+description | N | string | Description of the transaction.
 
 ### Returns
 Returns the transaction object if the update succeeded. This call will return an [error](https://tofupay.com/docs/api#errors) if update parameters are invalid.
@@ -515,13 +534,13 @@ Returns the transaction object if the update succeeded. This call will return an
 
 ```shell
 curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/capture \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -X POST
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 ch = Tofupay::transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.capture
@@ -529,14 +548,14 @@ ch.capture
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 ch = tofupay.transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.capture()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 $ch = \Tofupay\transaction::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch->capture();
@@ -607,13 +626,13 @@ Returns the transaction object, with an updated captured property (set to true).
 
 ```shell
 curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/refunds \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -X POST
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 ch = Tofupay::transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.refund
@@ -621,14 +640,14 @@ ch.refund
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 ch = tofupay.transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.refund()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 $ch = \Tofupay\transaction::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch->refund();

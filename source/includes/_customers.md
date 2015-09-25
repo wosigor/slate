@@ -8,31 +8,32 @@ Customer objects allow you to perform recurring charges and track multiple charg
 
 ```json
 {
-  "id": "cust_UkZICUu6UcehwfVf",
+  "id": "cust_zAiRxC7b3N2bc0Q6",
   "object": "customer",
   "livemode": false,
-  "created_at": 1433856023,
-  "email": "tofu1@pay.com",
+  "created_at": 1443083832,
+  "email": "tofupay125@tofu.com",
   "description": null,
-  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "default_card": "card_yaurbcUKmRaCw4fuKaoptl1K",
+  "url": "/v1/customers/cust_zAiRxC7b3N2bc0Q6/payment_methods",
   "payment_methods": {
     "data": [
       {
-        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+        "id": "card_yaurbcUKmRaCw4fuKaoptl1K",
         "object": "card",
-        "created_at": 1433856009,
+        "created_at": 1443083815,
         "brand": "visa",
         "last_four": 4242,
         "exp_month": 12,
         "exp_year": 2016,
         "holder_name": "Tofu Pay",
-        "country": "HK",
-        "address_1": null,
+        "country": null,
+        "address_1": "123",
         "address_2": null,
-        "address_city": null,
-        "address_country": null,
+        "address_city": "Hong Kong",
+        "address_country": "Hong Kong",
         "address_postcode": null,
-        "customer": "cust_UkZICUu6UcehwfVf"
+        "customer": "cust_zAiRxC7b3N2bc0Q6"
       }
     ]
   }
@@ -47,10 +48,10 @@ id | string | The ID of the customer.
 object |  string | 'customer'
 created_at | timestamp | Time of creation
 livemode | boolean | True - live, False - sandbox
-
-
-
-
+email | string | Email address of the client.
+description | string | Description of the customer.
+default_card | string | The ID of payment card.
+payment_methods | list | List of the registered payment methods.
 
 
 
@@ -64,14 +65,14 @@ livemode | boolean | True - live, False - sandbox
 
 ```shell
 curl https://api.tofupay.com/v1/customers \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -d description="Customer for test@example.com" \
    -d source=tok_15XZLsLdZh7jQOUq86ISvtjn
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay::Customer.create(
   :description => "Customer for test@example.com",
@@ -81,7 +82,7 @@ Tofupay::Customer.create(
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 tofupay.Customer.create(
   description="Customer for test@example.com",
@@ -90,7 +91,7 @@ tofupay.Customer.create(
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 \Tofupay\Customer::create(array(
   "description" => "Customer for test@example.com",
@@ -102,31 +103,32 @@ tofupay.Customer.create(
 
 ```json
 {
-  "id": "cust_UkZICUu6UcehwfVf",
+  "id": "cust_zAiRxC7b3N2bc0Q6",
   "object": "customer",
   "livemode": false,
-  "created_at": 1433856023,
-  "email": "tofu1@pay.com",
+  "created_at": 1443083832,
+  "email": "tofupay125@tofu.com",
   "description": null,
-  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "default_card": "card_yaurbcUKmRaCw4fuKaoptl1K",
+  "url": "/v1/customers/cust_zAiRxC7b3N2bc0Q6/payment_methods",
   "payment_methods": {
     "data": [
       {
-        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+        "id": "card_yaurbcUKmRaCw4fuKaoptl1K",
         "object": "card",
-        "created_at": 1433856009,
+        "created_at": 1443083815,
         "brand": "visa",
         "last_four": 4242,
         "exp_month": 12,
         "exp_year": 2016,
         "holder_name": "Tofu Pay",
-        "country": "HK",
-        "address_1": null,
+        "country": null,
+        "address_1": "123",
         "address_2": null,
-        "address_city": null,
-        "address_country": null,
+        "address_city": "Hong Kong",
+        "address_country": "Hong Kong",
         "address_postcode": null,
-        "customer": "cust_UkZICUu6UcehwfVf"
+        "customer": "cust_zAiRxC7b3N2bc0Q6"
       }
     ]
   }
@@ -141,7 +143,7 @@ Parameter | Required | Type | Description
 --------- | ------- | ----------- | -----------
 email | N | string | Email address.
 description | N | string | Description.
-card | N | string | A payment card token or dictionary containing a user's credit card details.
+payment_method | N | string | A payment card token or dictionary containing a user's credit card details.
 
 ### Returns
 Returns a customer object if the call succeeded. 
@@ -165,25 +167,25 @@ Returns a customer object if the call succeeded.
 
 ```shell
 curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc:
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 ```
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 ```
@@ -191,31 +193,32 @@ tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 
 ```json
 {
-  "id": "cust_UkZICUu6UcehwfVf",
+  "id": "cust_zAiRxC7b3N2bc0Q6",
   "object": "customer",
   "livemode": false,
-  "created_at": 1433856023,
-  "email": "tofu1@pay.com",
+  "created_at": 1443083832,
+  "email": "tofupay125@tofu.com",
   "description": null,
-  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "default_card": "card_yaurbcUKmRaCw4fuKaoptl1K",
+  "url": "/v1/customers/cust_zAiRxC7b3N2bc0Q6/payment_methods",
   "payment_methods": {
     "data": [
       {
-        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+        "id": "card_yaurbcUKmRaCw4fuKaoptl1K",
         "object": "card",
-        "created_at": 1433856009,
+        "created_at": 1443083815,
         "brand": "visa",
         "last_four": 4242,
         "exp_month": 12,
         "exp_year": 2016,
         "holder_name": "Tofu Pay",
-        "country": "HK",
-        "address_1": null,
+        "country": null,
+        "address_1": "123",
         "address_2": null,
-        "address_city": null,
-        "address_country": null,
+        "address_city": "Hong Kong",
+        "address_country": "Hong Kong",
         "address_postcode": null,
-        "customer": "cust_UkZICUu6UcehwfVf"
+        "customer": "cust_zAiRxC7b3N2bc0Q6"
       }
     ]
   }
@@ -253,25 +256,25 @@ Returns a customer object if a valid identifier was provided.
 
 ```shell
 curl https://api.tofupay.com/v1/customers?limit=3 \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc:
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 Tofupay::Customer.all(:limit => 3)
 ```
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 tofupay.Customer.all(limit=3)
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 \Tofupay\Customer::all(array("limit" => 3));
 ```
@@ -354,13 +357,13 @@ A dictionary with a data property that contains an array of up to limit transact
 
 ```shell
 curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -d description="Customer for test@example.com"
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 cu = Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.description = "Customer for test@example.com"
@@ -370,7 +373,7 @@ cu.save
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 cu = tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.description = "Customer for test@example.com"
@@ -378,7 +381,7 @@ cu.save()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 $cu = \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 $cu->description = "Customer for test@example.com";
@@ -389,31 +392,32 @@ $cu->save();
 
 ```json
 {
-  "id": "cust_UkZICUu6UcehwfVf",
+  "id": "cust_zAiRxC7b3N2bc0Q6",
   "object": "customer",
   "livemode": false,
-  "created_at": 1433856023,
-  "email": "tofu1@pay.com",
+  "created_at": 1443083832,
+  "email": "tofupay125@tofu.com",
   "description": null,
-  "default_card": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+  "default_card": "card_yaurbcUKmRaCw4fuKaoptl1K",
+  "url": "/v1/customers/cust_zAiRxC7b3N2bc0Q6/payment_methods",
   "payment_methods": {
     "data": [
       {
-        "id": "card_KtRLPsJGl5yUYWAVDnRFzCgj",
+        "id": "card_yaurbcUKmRaCw4fuKaoptl1K",
         "object": "card",
-        "created_at": 1433856009,
+        "created_at": 1443083815,
         "brand": "visa",
         "last_four": 4242,
         "exp_month": 12,
         "exp_year": 2016,
         "holder_name": "Tofu Pay",
-        "country": "HK",
-        "address_1": null,
+        "country": null,
+        "address_1": "123",
         "address_2": null,
-        "address_city": null,
-        "address_country": null,
+        "address_city": "Hong Kong",
+        "address_country": "Hong Kong",
         "address_postcode": null,
-        "customer": "cust_UkZICUu6UcehwfVf"
+        "customer": "cust_zAiRxC7b3N2bc0Q6"
       }
     ]
   }
@@ -449,13 +453,13 @@ Returns the customer object if the update succeeded. Returns an [error](https://
 
 ```shell
 curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
-   -u sk_test_qg15eqpUrbT6Gufhjq9ds0Jc: \
+   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -X DELETE
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 cu = Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.delete
@@ -463,14 +467,14 @@ cu.delete
 
 ```python
 import tofupay
-tofupay.api_key = "sk_test_qg15eqpUrbT6Gufhjq9ds0Jc"
+tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
 
 cu = tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 cu.delete()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("sk_test_qg15eqpUrbT6Gufhjq9ds0Jc");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
 
 $cu = \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 $cu->delete();
