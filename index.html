@@ -55,7 +55,7 @@
 <blockquote>
 <h3 id="api-endpoint">API Endpoint</h3>
 
-<p>https://api.tofupay.com</p>
+<p>https://sandbox.tofupay.com</p>
 </blockquote>
 
 <h3 id="api-reference">API Reference</h3>
@@ -68,7 +68,7 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 <blockquote>
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions <span class="se">\</span>
    -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 </code></pre>
 
@@ -775,7 +775,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 
 <h3 id="returns">Returns</h3>
 
-<p>Returns a transaction object if the transaction succeeded. Returns an <a href="https://tofupay.com/docs/api#errors">error</a> if something goes wrong. A common source of error is an invalid or expired card, or a valid card with insufficient available balance.</p>
+<p>Returns a transaction object if the transaction succeeded. Returns an <a href="http://wosigor.github.io/slate/#errors">error</a> if something goes wrong. A common source of error is an invalid or expired card, or a valid card with insufficient available balance.</p>
 
 <h2 id="retrieve-a-transaction">Retrieve a transaction</h2>
 
@@ -843,7 +843,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Retrieves the transactions object if a valid identifier was provided, and returns an <a href="https://tofupay.com/docs/api#errors">error</a> otherwise.</p>
+<p>Retrieves the transactions object if a valid identifier was provided, and returns an <a href="http://wosigor.github.io/slate/#errors">error</a> otherwise.</p>
 
 <h3 id="parameters">Parameters</h3>
 
@@ -1005,7 +1005,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 
 <h3 id="returns">Returns</h3>
 
-<p>A dictionary with a data property that contains an array of up to limit transactions. Each entry in the array is a separate transaction object. If no more transactions are available, the resulting array will be empty. If you provide a non-existent customer ID, this call returns an <a href="https://tofupay.com/docs/api#errors">error</a>.</p>
+<p>A dictionary with a data property that contains an array of up to limit transactions. Each entry in the array is a separate transaction object. If no more transactions are available, the resulting array will be empty. If you provide a non-existent customer ID, this call returns an <a href="http://wosigor.github.io/slate/#errors">error</a>.</p>
 
 <h2 id="update-a-transaction">Update a transaction</h2>
 
@@ -1102,7 +1102,7 @@ $ch-&gt;save();
 
 <h3 id="returns">Returns</h3>
 
-<p>Returns the transaction object if the update succeeded. This call will return an <a href="https://tofupay.com/docs/api#errors">error</a> if update parameters are invalid.</p>
+<p>Returns the transaction object if the update succeeded. This call will return an <a href="http://wosigor.github.io/slate/#errors">error</a> if update parameters are invalid.</p>
 
 <h2 id="capture-a-transaction">Capture a transaction</h2>
 
@@ -1174,7 +1174,7 @@ $ch-&gt;capture();
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Capture the payment of an existing, uncaptured, transaction. This is the second half of the two-step payment flow, where first you <a href="https://tofupay.com/docs/api/curl#create_transaction">created a transaction</a> with the capture option set to false.
+<p>Capture the payment of an existing, uncaptured, transaction. This is the second half of the two-step payment flow, where first you <a href="http://wosigor.github.io/slate//curl#create_transaction">created a transaction</a> with the capture option set to false.
 Uncaptured payments expire exactly seven days after they are created. If they are not captured by that point in time, they will be marked as refunded and will no longer be capturable.</p>
 
 <h3 id="parameters">Parameters</h3>
@@ -1197,7 +1197,7 @@ Uncaptured payments expire exactly seven days after they are created. If they ar
 
 <h3 id="returns">Returns</h3>
 
-<p>Returns the transaction object, with an updated captured property (set to true). Capturing a transaction will always succeed, unless the transaction is already refunded, expired, captured, or an invalid capture amount is specified, in which case this method will return an <a href="https://tofupay.com/docs/api#errors">error</a>.</p>
+<p>Returns the transaction object, with an updated captured property (set to true). Capturing a transaction will always succeed, unless the transaction is already refunded, expired, captured, or an invalid capture amount is specified, in which case this method will return an <a href="http://wosigor.github.io/slate/#errors">error</a>.</p>
 
 <h2 id="refund-a-transaction">Refund a transaction</h2>
 
@@ -1275,7 +1275,7 @@ $ch-&gt;refund();
 
 <h3 id="returns">Returns</h3>
 
-<p>Returns the transaction object, with an updated refund property (set to true). Refunding a transaction will always succeed, unless the transaction is already refunded, expired, or an invalid refund amount is specified, in which case this method will return an <a href="https://tofupay.com/docs/api#errors">error</a>.</p>
+<p>Returns the transaction object, with an updated refund property (set to true). Refunding a transaction will always succeed, unless the transaction is already refunded, expired, or an invalid refund amount is specified, in which case this method will return an <a href="http://wosigor.github.io/slate/#errors">error</a>.</p>
 
           <h1 id="customers">Customers</h1>
 
