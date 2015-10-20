@@ -69,27 +69,27 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 <h3 id="example-request">Example Request</h3>
 </blockquote>
 <pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 </code></pre>
 
 <blockquote>
 <p>curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).</p>
 </blockquote>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 </code></pre>
 
 <blockquote>
 <p>The API key has been preset for you.</p>
 </blockquote>
 
-<p>You authenticate to the Tofupay API by providing one of your API keys in the request. You can manage your API keys from your <a href="https://dashboard.tofupay.com/account">account</a>. You can have multiple API keys active at one time. Your API keys carry many privileges, so be sure to keep them secret!
-To use your API key, you need only set tofupay.api_key equal to the key. The Python library will automatically send this key in each request.
+<p>You authenticate to the Tofupay API by providing one of your API keys in the request. You can manage your API keys from your <a href="https://dashboard-staging.tofupay.com">account</a>. You can have multiple API keys active at one time. Your API keys carry many privileges, so be sure to keep them secret!
+To use your API key, you need only set tofupay.api_key equal to the key. 
 All API requests must be made over <a href="http://en.wikipedia.org/wiki/HTTPS">HTTPS</a>. Calls made over plain HTTP will fail. You must authenticate for all requests.</p>
 
 <p><code class="prettyprint">Authorization: api.key</code></p>
@@ -101,7 +101,7 @@ You must replace `api.key` with your personal API key.
           <h1 id="tokens">Tokens</h1>
 
 <p>Often you want to be able to charge credit cards or send payments to bank accounts without having to hold sensitive card information on your own servers. Tofupay.js makes this easy in the browser, but you can use the same technique in other environments with our token API.
-Tokens can be created with your publishable API key, which can safely be embedded in downloadable applications like iPhone and Android apps. You can then use a token anywhere in our API that a card or bank account is accepted. Note that tokens are not meant to be stored or used more than once—to store these details for use later, you should create Customer or Recipient objects.</p>
+Tokens can be created with your publishable API key, which can safely be embedded in downloadable applications like iPhone and Android apps. You can then use a token anywhere in our API that a card or bank account is accepted. Note that tokens are not meant to be stored or used more than once—to store these details for use later, you should create Customer object.</p>
 
 <h2 id="the-token-object">The token object</h2>
 
@@ -234,19 +234,19 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <blockquote>
 <h3 id="definition">Definition</h3>
 
-<p>POST https://api.tofupay.com/v1/tokens</p>
+<p>POST https://sandbox.tofupay.com/v1/tokens</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/tokens <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/tokens <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: <span class="se">\</span>
    -d card[number]<span class="o">=</span>4242424242424242 <span class="se">\</span>
    -d card[exp_month]<span class="o">=</span>12 <span class="se">\</span>
    -d card[exp_year]<span class="o">=</span>2016 <span class="se">\</span>
    -d card[cvc]<span class="o">=</span>123
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"Tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Token</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
   <span class="ss">:card</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -258,7 +258,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">Tofupay</span>
-<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">tofupay</span><span class="o">.</span><span class="n">Token</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
   <span class="n">card</span><span class="o">=</span><span class="p">{</span>
@@ -269,7 +269,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
   <span class="p">},</span>
 <span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Token::create(array(
   "card" =&gt; array(
@@ -398,26 +398,26 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <blockquote>
 <h3 id="definition">Definition</h3>
 
-<p>GET https://api.tofupay.com/v1/tokens/{TOKEN_ID}</p>
+<p>GET https://sandbox.tofupay.com/v1/tokens/{TOKEN_ID}</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"Tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Token</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"tok_15XZLsLdZh7jQOUq86ISvtjn"</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">Tofupay</span>
-<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">Tofupay</span><span class="o">.</span><span class="n">Token</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">"tok_15XZLsLdZh7jQOUq86ISvtjn"</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Token::retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn");
 </code></pre>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/tokens/tok_15XZLsLdZh7jQOUq86ISvtjn <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/tokens/tok_15XZLsLdZh7jQOUq86ISvtjn <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 </code></pre>
 
 <blockquote>
@@ -631,19 +631,19 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/transactions</p>
+<p>POST https://sandbox.tofupay.com/v1/transactions</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: <span class="se">\</span>
    -d <span class="nv">amount</span><span class="o">=</span>400 <span class="se">\</span>
    -d <span class="nv">currency</span><span class="o">=</span>usd <span class="se">\</span>
    -d <span class="nv">token</span><span class="o">=</span>tok_15XZLsLdZh7jQOUq86ISvtjn <span class="se">\</span>
    -d <span class="nv">description</span><span class="o">=</span><span class="s2">"Transaction for test@example.com"</span>
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Transaction</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
   <span class="ss">:amount</span> <span class="o">=&gt;</span> <span class="mi">400</span><span class="p">,</span>
@@ -653,7 +653,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">tofupay</span><span class="o">.</span><span class="n">Transaction</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
   <span class="n">amount</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span>
@@ -662,7 +662,7 @@ Tokens can be created with your publishable API key, which can safely be embedde
   <span class="n">description</span><span class="o">=</span><span class="s">"Transaction for test@example.com"</span>
 <span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Transaction::create(array(
   "amount" =&gt; 400,
@@ -782,24 +782,24 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>GET https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}</p>
+<p>GET https://sandbox.tofupay.com/v1/transactions/{TRANSACTION_ID}</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"Tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Transaction</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"tok_15XZLsLdZh7jQOUq86ISvtjn"</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">Tofupay</span>
-<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">Tofupay</span><span class="o">.</span><span class="n">Transaction</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">"tok_15XZLsLdZh7jQOUq86ISvtjn"</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Transaction::retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn");
 </code></pre>
@@ -872,24 +872,24 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>GET https://api.tofupay.com/v1/transactions</p>
+<p>GET https://sandbox.tofupay.com/v1/transactions</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions?limit<span class="o">=</span>3 <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions?limit<span class="o">=</span>3 <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"Tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Transaction</span><span class="p">.</span><span class="nf">all</span><span class="p">(</span><span class="ss">:limit</span> <span class="o">=&gt;</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">Tofupay</span>
-<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">Tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">Tofupay</span><span class="o">.</span><span class="n">Transaction</span><span class="o">.</span><span class="nb">all</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Transaction::all(array("limit" =&gt; 3));
 </code></pre>
@@ -1012,29 +1012,29 @@ Tokens can be created with your publishable API key, which can safely be embedde
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}</p>
+<p>POST https://sandbox.tofupay.com/v1/transactions/{TRANSACTION_ID}</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: <span class="se">\</span>
    -d <span class="nv">description</span><span class="o">=</span><span class="s2">"Transaction for test@example.com"</span>
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">ch</span> <span class="o">=</span> <span class="no">Tofupay</span><span class="o">::</span><span class="no">Charge</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">)</span>
 <span class="n">ch</span><span class="p">.</span><span class="nf">description</span> <span class="o">=</span> <span class="s2">"Charge for test@example.com"</span>
 <span class="n">ch</span><span class="p">.</span><span class="nf">save</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">ch</span> <span class="o">=</span> <span class="n">tofupay</span><span class="o">.</span><span class="n">Charge</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">)</span>
 <span class="n">ch</span><span class="o">.</span><span class="n">description</span> <span class="o">=</span> <span class="s">"Charge for test@example.com"</span>
 <span class="n">ch</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 $ch = \Tofupay\Charge::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch-&gt;description = "Charge for test@example.com";
@@ -1109,27 +1109,27 @@ $ch-&gt;save();
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}/capture</p>
+<p>POST https://sandbox.tofupay.com/v1/transactions/{TRANSACTION_ID}/capture</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/capture <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/capture <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: <span class="se">\</span>
    -X POST
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">ch</span> <span class="o">=</span> <span class="no">Tofupay</span><span class="o">::</span><span class="n">transaction</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">)</span>
 <span class="n">ch</span><span class="p">.</span><span class="nf">capture</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">ch</span> <span class="o">=</span> <span class="n">tofupay</span><span class="o">.</span><span class="n">transaction</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">)</span>
 <span class="n">ch</span><span class="o">.</span><span class="n">capture</span><span class="p">()</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 $ch = \Tofupay\transaction::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch-&gt;capture();
@@ -1204,27 +1204,27 @@ Uncaptured payments expire exactly seven days after they are created. If they ar
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/transactions/{TRANSACTION_ID}/refunds</p>
+<p>POST https://sandbox.tofupay.com/v1/transactions/{TRANSACTION_ID}/refunds</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/refunds <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/refunds <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: <span class="se">\</span>
    -X POST
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">ch</span> <span class="o">=</span> <span class="no">Tofupay</span><span class="o">::</span><span class="n">transaction</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">)</span>
 <span class="n">ch</span><span class="p">.</span><span class="nf">refund</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">ch</span> <span class="o">=</span> <span class="n">tofupay</span><span class="o">.</span><span class="n">transaction</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">"txn_15r6GrLdZh7jQOUqvvc9t1fA"</span><span class="p">)</span>
 <span class="n">ch</span><span class="o">.</span><span class="n">refund</span><span class="p">()</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 $ch = \Tofupay\transaction::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch-&gt;refund();
@@ -1375,17 +1375,17 @@ $ch-&gt;refund();
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/customers</p>
+<p>POST https://sandbox.tofupay.com/v1/customers</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/customers <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/customers <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: <span class="se">\</span>
    -d <span class="nv">description</span><span class="o">=</span><span class="s2">"Customer for test@example.com"</span> <span class="se">\</span>
    -d <span class="nb">source</span><span class="o">=</span>tok_15XZLsLdZh7jQOUq86ISvtjn
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Customer</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
   <span class="ss">:description</span> <span class="o">=&gt;</span> <span class="s2">"Customer for test@example.com"</span><span class="p">,</span>
@@ -1393,14 +1393,14 @@ $ch-&gt;refund();
 <span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">tofupay</span><span class="o">.</span><span class="n">Customer</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
   <span class="n">description</span><span class="o">=</span><span class="s">"Customer for test@example.com"</span><span class="p">,</span>
   <span class="n">source</span><span class="o">=</span><span class="s">"tok_15XZLsLdZh7jQOUq86ISvtjn"</span> <span class="c"># obtained with Tofupay.js</span>
 <span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Customer::create(array(
   "description" =&gt; "Customer for test@example.com",
@@ -1485,24 +1485,24 @@ $ch-&gt;refund();
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/customers/{CUSTOMER_ID}</p>
+<p>POST https://sandbox.tofupay.com/v1/customers/{CUSTOMER_ID}</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX <span class="se">\</span>
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX <span class="se">\</span>
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
-<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="no">Tofupay</span><span class="p">.</span><span class="nf">api_key</span> <span class="o">=</span> <span class="s2">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="no">Tofupay</span><span class="o">::</span><span class="no">Customer</span><span class="p">.</span><span class="nf">retrieve</span><span class="p">(</span><span class="s2">"cus_5V50idQJ7fxkRX"</span><span class="p">)</span>
 </code></pre>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">tofupay</span>
-<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"</span>
+<span class="n">tofupay</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s">"key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"</span>
 
 <span class="n">tofupay</span><span class="o">.</span><span class="n">Customer</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="s">"cus_5V50idQJ7fxkRX"</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+<pre class="highlight php"><code>\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 </code></pre>
@@ -1572,11 +1572,11 @@ $ch-&gt;refund();
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>GET https://api.tofupay.com/v1/customers</p>
+<p>GET https://sandbox.tofupay.com/v1/customers</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/customers?limit<span class="o">=</span>3 <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/customers?limit<span class="o">=</span>3 <span class="se">\</span>
    -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 </code></pre>
 <pre class="highlight ruby"><code><span class="nb">require</span> <span class="s2">"tofupay"</span>
@@ -1675,11 +1675,11 @@ $ch-&gt;refund();
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>POST https://api.tofupay.com/v1/customers/{CUSTOMER_ID}</p>
+<p>POST https://sandbox.tofupay.com/v1/customers/{CUSTOMER_ID}</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX <span class="se">\</span>
    -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
    -d <span class="nv">description</span><span class="o">=</span><span class="s2">"Customer for test@example.com"</span>
 </code></pre>
@@ -1789,11 +1789,11 @@ $cu-&gt;save();
 <blockquote>
 <h3 id="definition">DEFINITION</h3>
 
-<p>DELETE https://api.tofupay.com/v1/customers/{CUSTOMER_ID}</p>
+<p>DELETE https://sandbox.tofupay.com/v1/customers/{CUSTOMER_ID}</p>
 
 <h3 id="example-request">Example Request</h3>
 </blockquote>
-<pre class="highlight shell"><code>curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX <span class="se">\</span>
+<pre class="highlight shell"><code>curl https://sandbox.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX <span class="se">\</span>
    -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: <span class="se">\</span>
    -X DELETE
 </code></pre>
@@ -1918,61 +1918,20 @@ Not all errors map cleanly onto HTTP response codes, however. When a request is 
 
 <h2 id="error-codes">Error codes</h2>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>incorrect_number</td>
-<td>The card number is incorrect.</td>
-</tr>
-<tr>
-<td>invalid_number</td>
-<td>The card number is not a valid credit card number.</td>
-</tr>
-<tr>
-<td>invalid_expiry_month</td>
-<td>The card&rsquo;s expiration month is invalid.</td>
-</tr>
-<tr>
-<td>invalid_expiry_year</td>
-<td>The card&rsquo;s expiration year is invalid.</td>
-</tr>
-<tr>
-<td>invalid_cvc</td>
-<td>The card&rsquo;s security code is invalid.</td>
-</tr>
-<tr>
-<td>expired_card</td>
-<td>The card has expired.</td>
-</tr>
-<tr>
-<td>incorrect_cvc</td>
-<td>The card&rsquo;s security code is incorrect.</td>
-</tr>
-<tr>
-<td>incorrect_zip</td>
-<td>The card&rsquo;s zip code failed validation.</td>
-</tr>
-<tr>
-<td>card_declined</td>
-<td>The card was declined.</td>
-</tr>
-<tr>
-<td>missing</td>
-<td>There is no card on a customer that is being charged.</td>
-</tr>
-<tr>
-<td>processing_error</td>
-<td>An error occurred while processing the card.</td>
-</tr>
-<tr>
-<td>rate_limit</td>
-<td>An error occurred due to requests hitting the API too quickly. Please let us know if you&rsquo;re consistently running into this error.</td>
-</tr>
-</tbody></table>
+<!-- Error Code | Meaning
+---------- | -------
+incorrect_number | The card number is incorrect.
+invalid_number | The card number is not a valid credit card number.
+invalid_expiry_month | The card's expiration month is invalid.
+invalid_expiry_year | The card's expiration year is invalid.
+invalid_cvc | The card's security code is invalid.
+expired_card | The card has expired.
+incorrect_cvc | The card's security code is incorrect.
+incorrect_zip | The card's zip code failed validation.
+card_declined | The card was declined.
+missing | There is no card on a customer that is being charged.
+processing_error | An error occurred while processing the card.
+rate_limit | An error occurred due to requests hitting the API too quickly. Please let us know if you're consistently running into this error. -->
 
       </div>
       <div class="dark-box">
