@@ -27,7 +27,7 @@ search: true
 # Introduction
 
 > ### API Endpoint
-> https://api.tofupay.com
+> https://sandbox.tofupay.com
 
 ### API Reference
 
@@ -49,7 +49,7 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/transactions \
+curl https://sandbox.tofupay.com/v1/transactions \
    -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 ```
 
