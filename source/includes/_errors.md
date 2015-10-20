@@ -28,7 +28,7 @@ card_error | Card errors are the most common type of error you should expect to 
 
 ## Error codes
 
-Error Code | Meaning
+<!-- Error Code | Meaning
 ---------- | -------
 incorrect_number | The card number is incorrect.
 invalid_number | The card number is not a valid credit card number.
@@ -41,5 +41,5 @@ incorrect_zip | The card's zip code failed validation.
 card_declined | The card was declined.
 missing | There is no card on a customer that is being charged.
 processing_error | An error occurred while processing the card.
-rate_limit | An error occurred due to requests hitting the API too quickly. Please let us know if you're consistently running into this error.
+rate_limit | An error occurred due to requests hitting the API too quickly. Please let us know if you're consistently running into this error. -->
 

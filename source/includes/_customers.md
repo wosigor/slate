@@ -60,19 +60,19 @@ payment_methods | list | List of the registered payment methods.
 ## Create a customer
 
 > ### DEFINITION
-> POST https://api.tofupay.com/v1/customers
+> POST https://sandbox.tofupay.com/v1/customers
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/customers \
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
+curl https://sandbox.tofupay.com/v1/customers \
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
    -d description="Customer for test@example.com" \
    -d source=tok_15XZLsLdZh7jQOUq86ISvtjn
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 Tofupay::Customer.create(
   :description => "Customer for test@example.com",
@@ -82,7 +82,7 @@ Tofupay::Customer.create(
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 tofupay.Customer.create(
   description="Customer for test@example.com",
@@ -91,7 +91,7 @@ tofupay.Customer.create(
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Customer::create(array(
   "description" => "Customer for test@example.com",
@@ -162,30 +162,30 @@ Returns a customer object if the call succeeded.
 ## Retrieve a customer
 
 > ### DEFINITION
-> POST https://api.tofupay.com/v1/customers/{CUSTOMER_ID}
+> POST https://sandbox.tofupay.com/v1/customers/{CUSTOMER_ID}
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+curl https://sandbox.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 Tofupay::Customer.retrieve("cus_5V50idQJ7fxkRX")
 ```
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 tofupay.Customer.retrieve("cus_5V50idQJ7fxkRX")
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Customer::retrieve("cus_5V50idQJ7fxkRX");
 ```
@@ -251,11 +251,11 @@ Returns a customer object if a valid identifier was provided.
 ## Retrieve all customers
 
 > ### DEFINITION
-> GET https://api.tofupay.com/v1/customers
+> GET https://sandbox.tofupay.com/v1/customers
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/customers?limit=3 \
+curl https://sandbox.tofupay.com/v1/customers?limit=3 \
    -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
 ```
 
@@ -352,11 +352,11 @@ A dictionary with a data property that contains an array of up to limit transact
 ## Update a customer
 
 > ### DEFINITION
-> POST https://api.tofupay.com/v1/customers/{CUSTOMER_ID}
+> POST https://sandbox.tofupay.com/v1/customers/{CUSTOMER_ID}
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
+curl https://sandbox.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
    -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -d description="Customer for test@example.com"
 ```
@@ -448,11 +448,11 @@ Returns the customer object if the update succeeded. Returns an [error](https://
 ## Delete a customer
 
 > ### DEFINITION
-> DELETE https://api.tofupay.com/v1/customers/{CUSTOMER_ID}
+> DELETE https://sandbox.tofupay.com/v1/customers/{CUSTOMER_ID}
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
+curl https://sandbox.tofupay.com/v1/customers/cus_5V50idQJ7fxkRX \
    -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
    -X DELETE
 ```

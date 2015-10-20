@@ -50,7 +50,7 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 
 ```shell
 curl https://api.tofupay.com/v1/transactions \
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 ```
 
 > curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).
@@ -58,22 +58,22 @@ curl https://api.tofupay.com/v1/transactions \
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 ```
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 ```
 
 > The API key has been preset for you.
 
-You authenticate to the Tofupay API by providing one of your API keys in the request. You can manage your API keys from your [account](https://dashboard.tofupay.com/account). You can have multiple API keys active at one time. Your API keys carry many privileges, so be sure to keep them secret!
-To use your API key, you need only set tofupay.api_key equal to the key. The Python library will automatically send this key in each request.
+You authenticate to the Tofupay API by providing one of your API keys in the request. You can manage your API keys from your [account](https://dashboard-staging.tofupay.com). You can have multiple API keys active at one time. Your API keys carry many privileges, so be sure to keep them secret!
+To use your API key, you need only set tofupay.api_key equal to the key. 
 All API requests must be made over [HTTPS](http://en.wikipedia.org/wiki/HTTPS). Calls made over plain HTTP will fail. You must authenticate for all requests.
 
 `Authorization: api.key`

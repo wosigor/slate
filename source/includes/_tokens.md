@@ -1,7 +1,7 @@
 # Tokens
 
 Often you want to be able to charge credit cards or send payments to bank accounts without having to hold sensitive card information on your own servers. Tofupay.js makes this easy in the browser, but you can use the same technique in other environments with our token API.
-Tokens can be created with your publishable API key, which can safely be embedded in downloadable applications like iPhone and Android apps. You can then use a token anywhere in our API that a card or bank account is accepted. Note that tokens are not meant to be stored or used more than once—to store these details for use later, you should create Customer or Recipient objects.
+Tokens can be created with your publishable API key, which can safely be embedded in downloadable applications like iPhone and Android apps. You can then use a token anywhere in our API that a card or bank account is accepted. Note that tokens are not meant to be stored or used more than once—to store these details for use later, you should create Customer object.
 
 ## The token object
 
@@ -64,12 +64,12 @@ card[customer] | string | ID of a customer which the card is attached to.
 ## Create a card token
 
 > ### Definition
-> POST https://api.tofupay.com/v1/tokens
+> POST https://sandbox.tofupay.com/v1/tokens
 > ### Example Request
 
 ```shell
-curl https://api.tofupay.com/v1/tokens \
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T: \
+curl https://sandbox.tofupay.com/v1/tokens \
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
    -d card[number]=4242424242424242 \
    -d card[exp_month]=12 \
    -d card[exp_year]=2016 \
@@ -78,7 +78,7 @@ curl https://api.tofupay.com/v1/tokens \
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 Tofupay::Token.create(
   :card => {
@@ -92,7 +92,7 @@ Tofupay::Token.create(
 
 ```python
 import Tofupay
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 tofupay.Token.create(
   card={
@@ -105,7 +105,7 @@ tofupay.Token.create(
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Token::create(array(
   "card" => array(
@@ -179,32 +179,32 @@ The created card token object is returned if successful. Otherwise, this call re
 ## Retrieve a token
 
 > ### Definition
-> GET https://api.tofupay.com/v1/tokens/{TOKEN_ID}
+> GET https://sandbox.tofupay.com/v1/tokens/{TOKEN_ID}
 > ### Example Request
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 Tofupay::Token.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```python
 import Tofupay
-Tofupay.api_key = "key_private_sandbox_SXHzPNyPqLC3s0uN00j6T"
+Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
 
 Tofupay.Token.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_SXHzPNyPqLC3s0uN00j6T");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
 
 \Tofupay\Token::retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn");
 ```
 
 ```shell
-curl https://api.tofupay.com/v1/tokens/tok_15XZLsLdZh7jQOUq86ISvtjn \
-   -u key_private_sandbox_SXHzPNyPqLC3s0uN00j6T:
+curl https://sandbox.tofupay.com/v1/tokens/tok_15XZLsLdZh7jQOUq86ISvtjn \
+   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
 ```
 
 > ### Example Response
