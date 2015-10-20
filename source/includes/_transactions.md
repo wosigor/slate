@@ -87,7 +87,7 @@ refunds | list | List of refunds attached to transaction.
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT: \
    -d amount=400 \
    -d currency=usd \
    -d token=tok_15XZLsLdZh7jQOUq86ISvtjn \
@@ -96,7 +96,7 @@ curl https://sandbox.tofupay.com/v1/transactions \
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay::Transaction.create(
   :amount => 400,
@@ -108,7 +108,7 @@ Tofupay::Transaction.create(
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 tofupay.Transaction.create(
   amount=400,
@@ -119,7 +119,7 @@ tofupay.Transaction.create(
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 \Tofupay\Transaction::create(array(
   "amount" => 400,
@@ -205,25 +205,25 @@ Returns a transaction object if the transaction succeeded. Returns an [error](ht
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT:
 ```
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay::Transaction.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```python
 import Tofupay
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay.Transaction.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 \Tofupay\Transaction::retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn");
 ```
@@ -298,25 +298,25 @@ Returns a transaction if a valid ID was provided. Raises an error otherwise.
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions?limit=3 \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT:
 ```
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay::Transaction.all(:limit => 3)
 ```
 
 ```python
 import Tofupay
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay.Transaction.all(limit=3)
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 \Tofupay\Transaction::all(array("limit" => 3));
 ```
@@ -436,13 +436,13 @@ A dictionary with a data property that contains an array of up to limit transact
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions/txn_15r6GrLdZh7jQOUqvvc9t1fA \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT: \
    -d description="Transaction for test@example.com"
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 ch = Tofupay::Charge.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.description = "Charge for test@example.com"
@@ -451,7 +451,7 @@ ch.save
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 ch = tofupay.Charge.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.description = "Charge for test@example.com"
@@ -459,7 +459,7 @@ ch.save()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 $ch = \Tofupay\Charge::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch->description = "Charge for test@example.com";
@@ -534,13 +534,13 @@ Returns the transaction object if the update succeeded. This call will return an
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/capture \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT: \
    -X POST
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 ch = Tofupay::transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.capture
@@ -548,14 +548,14 @@ ch.capture
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 ch = tofupay.transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.capture()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 $ch = \Tofupay\transaction::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch->capture();
@@ -626,13 +626,13 @@ Returns the transaction object, with an updated captured property (set to true).
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions/tok_15XZLsLdZh7jQOUq86ISvtjn/refunds \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT: \
    -X POST
 ```
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 ch = Tofupay::transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.refund
@@ -640,14 +640,14 @@ ch.refund
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 ch = tofupay.transaction.retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA")
 ch.refund()
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 $ch = \Tofupay\transaction::retrieve("txn_15r6GrLdZh7jQOUqvvc9t1fA");
 $ch->refund();

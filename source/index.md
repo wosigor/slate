@@ -50,7 +50,7 @@ To make the Tofupay API as explorable as possible, accounts have test-mode API k
 
 ```shell
 curl https://sandbox.tofupay.com/v1/transactions \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT:
 ```
 
 > curl uses the -u flag to pass basic auth credentials (adding a colon after your API key will prevent it from asking you for a password).
@@ -58,16 +58,16 @@ curl https://sandbox.tofupay.com/v1/transactions \
 
 ```ruby
 require "tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 ```
 
 ```python
 import tofupay
-tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 ```
 
 > The API key has been preset for you.

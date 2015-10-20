@@ -69,7 +69,7 @@ card[customer] | string | ID of a customer which the card is attached to.
 
 ```shell
 curl https://sandbox.tofupay.com/v1/tokens \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl: \
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT: \
    -d card[number]=4242424242424242 \
    -d card[exp_month]=12 \
    -d card[exp_year]=2016 \
@@ -78,7 +78,7 @@ curl https://sandbox.tofupay.com/v1/tokens \
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay::Token.create(
   :card => {
@@ -92,7 +92,7 @@ Tofupay::Token.create(
 
 ```python
 import Tofupay
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 tofupay.Token.create(
   card={
@@ -105,7 +105,7 @@ tofupay.Token.create(
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 \Tofupay\Token::create(array(
   "card" => array(
@@ -184,27 +184,27 @@ The created card token object is returned if successful. Otherwise, this call re
 
 ```ruby
 require "Tofupay"
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay::Token.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```python
 import Tofupay
-Tofupay.api_key = "key_private_sandbox_8j48HWFp94UldHpJDzHgDUl"
+Tofupay.api_key = "key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT"
 
 Tofupay.Token.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 ```
 
 ```php
-\Tofupay\Tofupay::setApiKey("key_private_sandbox_8j48HWFp94UldHpJDzHgDUl");
+\Tofupay\Tofupay::setApiKey("key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT");
 
 \Tofupay\Token::retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn");
 ```
 
 ```shell
 curl https://sandbox.tofupay.com/v1/tokens/tok_15XZLsLdZh7jQOUq86ISvtjn \
-   -u key_private_sandbox_8j48HWFp94UldHpJDzHgDUl:
+   -u key_private_sandbox_HUawJJEfQWfgmoaHnfR2tRQT:
 ```
 
 > ### Example Response
