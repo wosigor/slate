@@ -184,7 +184,7 @@ description | N | string | Additional optional description of the transaction.
 capture | N, default **true** | boolean | Whether or not to immediately capture the transaction. When false, the transaction issues an authorization (or pre-authorization), and will need to be captured later. Uncaptured transactions expire in 7 days. For more information, see authorizing 
 
 ### Returns
-Returns a transaction object if the transaction succeeded. Returns an [error](https://tofupay.com/docs/api#errors) if something goes wrong. A common source of error is an invalid or expired card, or a valid card with insufficient available balance.
+Returns a transaction object if the transaction succeeded. Returns an [error](http://wosigor.github.io/slate/#errors) if something goes wrong. A common source of error is an invalid or expired card, or a valid card with insufficient available balance.
 
 
 
@@ -266,7 +266,7 @@ Tofupay.Transaction.retrieve("tok_15XZLsLdZh7jQOUq86ISvtjn")
 }
 ```
 
-Retrieves the transactions object if a valid identifier was provided, and returns an [error](https://tofupay.com/docs/api#errors) otherwise.
+Retrieves the transactions object if a valid identifier was provided, and returns an [error](http://wosigor.github.io/slate/#errors) otherwise.
 
 ### Parameters
 
@@ -419,7 +419,7 @@ Parameter | Required | Type | Description
 limit | N | integer | Maximum number of transaction objects to be returned
 
 ### Returns
-A dictionary with a data property that contains an array of up to limit transactions. Each entry in the array is a separate transaction object. If no more transactions are available, the resulting array will be empty. If you provide a non-existent customer ID, this call returns an [error](https://tofupay.com/docs/api#errors).
+A dictionary with a data property that contains an array of up to limit transactions. Each entry in the array is a separate transaction object. If no more transactions are available, the resulting array will be empty. If you provide a non-existent customer ID, this call returns an [error](http://wosigor.github.io/slate/#errors).
 
 
 
@@ -513,7 +513,7 @@ Parameter | Required | Type | Description
 description | N | string | Description of the transaction.
 
 ### Returns
-Returns the transaction object if the update succeeded. This call will return an [error](https://tofupay.com/docs/api#errors) if update parameters are invalid.
+Returns the transaction object if the update succeeded. This call will return an [error](http://wosigor.github.io/slate/#errors) if update parameters are invalid.
 
 
 
@@ -600,7 +600,7 @@ $ch->capture();
 }
 ```
 
-Capture the payment of an existing, uncaptured, transaction. This is the second half of the two-step payment flow, where first you [created a transaction](https://tofupay.com/docs/api/curl#create_transaction) with the capture option set to false.
+Capture the payment of an existing, uncaptured, transaction. This is the second half of the two-step payment flow, where first you [created a transaction](http://wosigor.github.io/slate//curl#create_transaction) with the capture option set to false.
 Uncaptured payments expire exactly seven days after they are created. If they are not captured by that point in time, they will be marked as refunded and will no longer be capturable.
 
 ### Parameters
@@ -610,7 +610,7 @@ Parameter | Required | Type | Description
 id | Y | string | The ID of the desired transaction.
 
 ### Returns
-Returns the transaction object, with an updated captured property (set to true). Capturing a transaction will always succeed, unless the transaction is already refunded, expired, captured, or an invalid capture amount is specified, in which case this method will return an [error](https://tofupay.com/docs/api#errors).
+Returns the transaction object, with an updated captured property (set to true). Capturing a transaction will always succeed, unless the transaction is already refunded, expired, captured, or an invalid capture amount is specified, in which case this method will return an [error](http://wosigor.github.io/slate/#errors).
 
 
 
@@ -680,7 +680,7 @@ amount | N | double | The amount representing how much of this transaction to re
 description | N | string | 
 
 ### Returns
-Returns the transaction object, with an updated refund property (set to true). Refunding a transaction will always succeed, unless the transaction is already refunded, expired, or an invalid refund amount is specified, in which case this method will return an [error](https://tofupay.com/docs/api#errors).
+Returns the transaction object, with an updated refund property (set to true). Refunding a transaction will always succeed, unless the transaction is already refunded, expired, or an invalid refund amount is specified, in which case this method will return an [error](http://wosigor.github.io/slate/#errors).
 
 
 
